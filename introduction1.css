@@ -1,12 +1,11 @@
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
+    .navContainer {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid bisque;
+    }
+}
 
-.navContainer {
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid bisque;
-   
-}
-}
 /* *모든태그  */
 
 * {
@@ -21,6 +20,7 @@ html, body {
 /* 헤더메뉴   */
 
 #headerContainer {
+    
     margin: 0 auto;
     width: 1080px;
 }
@@ -90,6 +90,7 @@ html, body {
 }
 
 .header_search fieldset {
+    position: relative;
     margin: 0 auto;
     padding: 12px 0 12px 10px;
     width: 520px;
@@ -98,7 +99,6 @@ html, body {
     /*헥스표기법*/
     display: inline-block;
     vertical-align: middle;
-    position: relative;
 }
 
 .header_search fieldset button {
@@ -107,10 +107,52 @@ html, body {
     border: none;
     background: #ff9234;
     position: absolute;
-    padding: 0;
+    padding: 10;
     right: -2px;
     top: 0;
     outline: white;
+}
+
+fieldset input {
+    position: relative;
+    display: inline-block;
+    height: 15px;
+    overflow: hidden;
+    animation: typingAni 3s steps(30, end) 1;
+}
+
+fieldset input::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 23px;
+    top: 3px;
+    right: 0;
+    border-right: 1px solid #000;
+    animation: cursor 0.2s step-end infinite;
+}
+
+@keyframes typingAni {
+    0% {
+        width: 0%
+    }
+    100% {
+        width: 150px
+    }
+    ;
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .header_search fieldset button img {
@@ -131,6 +173,26 @@ html, body {
     top: 0
 }
 
+#serach_keyboard {
+    position: absolute;
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    top:10px;
+    left: -50px;
+    height: 11px;
+    margin: 3px;
+}
+
+#serach_history {
+    position: absolute;
+    display: inline-block;
+    vertical-align: top;
+    left: -20px;
+    width: 11px;
+    height: 4px;
+}
+
 /* 검색 */
 
 /* 네비바 left  */
@@ -146,7 +208,6 @@ nav {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid bisque;
-   
 }
 
 .navContainer ul {
@@ -157,13 +218,19 @@ nav {
 
 .navContainer li {
     margin: 5px;
-    border: 1px solid bisque;
+    border: 2px solid bisque;
     border-radius: 50px;
     display: inline-block;
     font-size: 1px;
     padding: 10px;
     color: gray;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.navContainer li a {
+    text-decoration: none;
+    list-style: none;
+    color: gray;
 }
 
 /* 슬라이더 */
@@ -242,6 +309,7 @@ h1 {
     list-style: none;
 }
 
+
 .panel {
     width: 400px;
     min-height: 400px;
@@ -264,8 +332,7 @@ footer {
     width: 30px;
     vertical-align: middle;
     margin: 5px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, 
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .copyright {
@@ -275,4 +342,3 @@ footer {
     text-align: center;
     font: 'San Francisco', Helvetica, Arial, san-serif
 }
-
