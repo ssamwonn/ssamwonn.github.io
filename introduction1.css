@@ -1,0 +1,282 @@
+@media screen and (min-width: 769px) {
+
+.navContainer {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid bisque;
+   
+}
+ }
+ 
+
+
+
+/* *모든태그  */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 헤더메뉴   */
+
+#headerContainer {
+    margin: 0 auto;
+    width: 1080px;
+}
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+.header_menu2 {
+    display: inline-block;
+    justify-content: flex-end;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header_menu2 a {
+    color: black;
+    padding: 14px 16px;
+    font-size: 10px;
+}
+
+.header_menu2 img {
+    margin: 0;
+    width: 64px;
+    height: 65px;
+    color: yellow;
+    display: flex;
+}
+
+.header_menu2 a:hover {
+    color: #808080;
+}
+
+.header_search {
+    display: inline-block;
+    display: flex;
+    margin: 0 auto;
+}
+
+.header_search h1 {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+.header_search>img {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    top: -28px;
+    right: -200px;
+}
+
+/* blind 속성은 스크린에서는 보이게 하고 ui에서는 보이지 않게 한다 */
+
+.header_search h2 {
+    display: none;
+}
+
+.header_search fieldset {
+    margin: 0 auto;
+    padding: 12px 0 12px 10px;
+    width: 520px;
+    height: 49px;
+    border: 2px solid #ff9234;
+    /*헥스표기법*/
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.header_search fieldset button {
+    width: 49px;
+    height: 46px;
+    border: none;
+    background: #ff9234;
+    position: absolute;
+    padding: 0;
+    right: -2px;
+    top: 0;
+    outline: white;
+}
+
+.header_search fieldset button img {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+}
+
+.header_search input {
+    border: none;
+    padding: 0;
+    outline: none;
+    vertical-align: middle;
+    width: 405px;
+    height: 23px;
+    left: 10;
+    right: 0;
+    top: 0
+}
+
+/* 검색 */
+
+/* 네비바 left  */
+
+nav {
+    display: block;
+    width: 1080px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid bisque;
+   
+}
+
+.navContainer ul {
+    margin: 0;
+    padding: 30px;
+    list-style: none;
+}
+
+.navContainer li {
+    margin: 5px;
+    border: 1px solid bisque;
+    border-radius: 50px;
+    display: inline-block;
+    font-size: 1px;
+    padding: 10px;
+    color: gray;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* 슬라이더 */
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.slide_btn_box {
+    position: relative;
+    display: flex;
+    width: 1080px;
+    height: 30px;
+    margin: 0 auto;
+    top: 200px;
+}
+
+.slide_btn {
+    margin: 0;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: gray;
+    outline: white;
+}
+
+/* 슬라이드 동작  */
+
+.handler_left {
+    margin: 0;
+    margin-left: 150px;
+    display: flex;
+    font-size: 20px;
+}
+
+.handler_left button :hover {
+    color: black;
+    border-radius: 30%;
+    cursor: pointer;
+}
+
+.handler_right {
+    margin: 0 auto;
+    margin-right: 150px;
+    display: flex;
+    font-size: 20px;
+}
+
+.handler_right button :hover {
+    color: black;
+    border-radius: 30%;
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    top: 40px;
+}
+
+.view {
+    display: flex;
+    position: relative;
+    top: 0px;
+    width: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.view .container {
+    display: flex;
+    padding: 0px;
+    list-style: none;
+}
+
+.panel {
+    width: 400px;
+    min-height: 400px;
+}
+
+footer {
+    margin: 0 auto;
+    width: 1080px;
+    height: 30px;
+}
+
+.footer_menu {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    margin: 30px;
+}
+
+.footer_menu img {
+    width: 30px;
+    vertical-align: middle;
+    margin: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, 
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.copyright {
+    margin: 20px;
+    font-size: 15px;
+    color: gray;
+    text-align: center;
+    font: 'San Francisco', Helvetica, Arial, san-serif
+}
+
