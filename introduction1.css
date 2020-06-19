@@ -198,7 +198,7 @@ fieldset input::after {
 }
 
 .navContainer li {
-    margin: 5px;
+    margin: 3px;
     border: 2px solid bisque;
     border-radius: 50px;
     display: inline-block;
@@ -219,30 +219,29 @@ fieldset input::after {
 .slide_btn_box {
     display: flex;
     justify-content: center;
-    width: 1080px;
+    width: 1700px;
     height: 30px;
-    top: 10px
+    top: 10px;
 }
 
 .slide_btn {
-    position: relative;
-    display: flex;;
     border: 3px solid white;
     border-radius: 50px;
     color: gray;
+    list-style: none;
+    outline: 0;
 }
 
 /* 슬라이드 동작  */
 
 .handler_left {
     margin-top: 10px;
-    margin-left: 110px;
-    display: flex;
+    margin-left: 80px;
 }
 
 .handler_right {
     margin-top: 10px;
-    display: flex;
+    margin-left: 300px;
 }
 
 .handler_left button :hover {
@@ -324,6 +323,13 @@ footer {
         height: 100px;
         margin: 0 auto;
     }
+    .header_menu2 img {
+        margin: 0;
+        width: 40px;
+        height: 40px;
+        color: yellow;
+        display: flex;
+    }
     .header_search {
         width: 100%;
     }
@@ -397,8 +403,10 @@ footer {
     fieldset {
         width: 100%
     }
-    .navContainer ul {
+    .navContainer ul li {
         width: 100%;
+        width: 30px;
+        height: 10px;
     }
     .slide_btn_box {
         float: left;
@@ -407,14 +415,12 @@ footer {
     .footer_menu {
         width: 100%;
         display: inline-block;
-        margin: 0 0 0 0;
         padding: 0 0 0 0;
     }
     footer {
         width: 100%;
         display: inline-block;
-        margin: 0 0 0 0;
-        padding: 0 0 0 0;
+     
     }
     .copyright {
         display: inline-block;
