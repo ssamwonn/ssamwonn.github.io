@@ -17,7 +17,7 @@ html, body {
 
 #headerContainer {
     margin: 0 auto;
-    width: 1080px;
+    width: 800px;
 }
 
 .blind {
@@ -53,7 +53,7 @@ html, body {
 }
 
 .header_menu2 a:hover {
-    color: #808080;
+    color: #100808;
 }
 
 .header_search {
@@ -65,7 +65,7 @@ html, body {
 .header_search>img {
     position: relative;
     display: inline-block;
-    width: 100px;
+    width: 50px;
     top: -28px;
     right: -200px;
 }
@@ -80,7 +80,7 @@ html, body {
     position: relative;
     margin: 0 auto;
     padding: 12px 0 12px 10px;
-    width: 520px;
+    width: 400px;
     height: 49px;
     border: 2px solid #ff9234;
     /*헥스표기법*/
@@ -112,8 +112,8 @@ fieldset input::after {
     position: absolute;
     display: inline-block;
     content: "";
-    width: 20px;
-    height: 23px;
+    width: 10px;
+    height: 10px;
     top: 3px;
     right: 0;
     border-right: 1px solid #000;
@@ -184,17 +184,11 @@ fieldset input::after {
 
 /* 네비바 left  */
 
-nav {
-    display: block;
-    width: 1080px;
-    height: 100px;
-    margin: 0 auto;
-}
-
 .navContainer {
+    width: 100%;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid bisque;
+    border-bottom: 3px solid bisque;
 }
 
 .navContainer ul {
@@ -223,41 +217,38 @@ nav {
 /* 슬라이더 */
 
 .slide_btn_box {
-    position: relative;
     display: flex;
+    justify-content: center;
     width: 1080px;
     height: 30px;
-    margin: 0 auto;
-    top: 200px;
+    top: 10px
 }
 
 .slide_btn {
-    margin: 0;
-    border: 1px solid white;
-    border-radius: 50%;
+    position: relative;
+    display: flex;;
+    border: 3px solid white;
+    border-radius: 50px;
     color: gray;
-    outline: white;
 }
 
 /* 슬라이드 동작  */
 
 .handler_left {
-    margin-left: 200px;
+    margin-top: 10px;
+    margin-left: 110px;
     display: flex;
-    font-size: 20px;
+}
+
+.handler_right {
+    margin-top: 10px;
+    display: flex;
 }
 
 .handler_left button :hover {
     color: black;
     border-radius: 30%;
     cursor: pointer;
-}
-
-.handler_right {
-    margin: 0 auto;
-    margin-right: 200px;
-    display: flex;
-    font-size: 20px;
 }
 
 .handler_right button :hover {
@@ -296,8 +287,8 @@ nav {
 }
 
 footer {
-    margin: 0 auto;
-    width: 1080px;
+    text-align: center;
+    font-size: 5px;
     height: 30px;
 }
 
@@ -316,816 +307,117 @@ footer {
 }
 
 .copyright {
-    margin: 10px;
-    font-size: 15px;
+    margin-top: 40px;
+    font-size: 5px;
     color: gray;
     text-align: center;
     font: 'San Francisco', Helvetica, Arial, san-serif
 }
 
-@media ( min-width:800px) and (max-width:1000px) {
+@media (max-width:1220px) {
     #headerContainer {
-        margin: 0 auto;
-        width: 1000px;
-    }
-    body {
-        width: 1000px;
-    }
-    .header_menu2 {
-        position: relative;
-        top: 50px;
-        display: flex;
-        justify-content: center;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .header_menu2 a {
-        color: black;
-        padding: 14px 16px;
-        font-size: 10px;
-    }
-    .header_menu2 img {
-        margin-bottom: 0;
-        width: 40px;
-        height: 40px;
-    }
-    .header_menu2 a:hover {
-        color: #808080;
-    }
-    .header_search {
-        width: 1000px;
-        height: 10px;
-        margin-top: 0;
-        display: inline-block;
-    }
-    .header_search>img {
-        position: relative;
-        display: inline-block;
-        width: 100px;
-        top: 50px;
-        right: -180px;
-    }
-    .header_search h2 {
-        display: none;
-    }
-    .header_search fieldset {
-        position: relative;
-        top: -30px;
-        display: flex;
-        padding: 12px 0 12px 10px;
-        width: 420px;
-        height: 49px;
-        border: 2px solid #ff9234;
-        vertical-align: middle;
-    }
-    .header_search fieldset button {
-        width: 49px;
-        height: 46px;
-        border: none;
-        background: #ff9234;
-        position: absolute;
-        padding: 10;
-        right: -2px;
-        top: 0;
-        outline: white;
-    }
-    fieldset input {
-        position: relative;
-        display: inline-block;
-        height: 15px;
-        overflow: hidden;
-        animation: typingAni 3s steps(30, end) 1;
-    }
-    fieldset input::after {
-        position: absolute;
-        display: inline-block;
-        content: "";
-        width: 20px;
-        height: 23px;
-        top: 3px;
-        right: 0;
-        border-right: 1px solid #000;
-        animation: cursor 0.2s step-end infinite;
-    }
-    @keyframes typingAni {
-        0% {
-            width: 0%
-        }
-        100% {
-            width: 150px
-        }
-        ;
-    }
-    @keyframes cursor {
-        0% {
-            opacity: 0;
-        }
-        50% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
-    .header_search fieldset button img {
-        display: inline-block;
-        width: 21px;
-        height: 21px;
-    }
-    .header_search input {
-        border: none;
-        padding: 0;
-        outline: none;
-        vertical-align: middle;
-        width: 405px;
-        height: 23px;
-        left: 10;
-        right: 0;
-        top: 0
-    }
-    #search_keyboard {
-        position: absolute;
-        display: inline-block;
-        vertical-align: top;
-        width: 20px;
-        top: 10px;
-        left: -50px;
-        height: 11px;
-        margin: 3px;
-    }
-    #search_history {
-        position: absolute;
-        display: inline-block;
-        vertical-align: top;
-        left: -20px;
-        width: 11px;
-        height: 4px;
+        width: 100%;
     }
     nav {
-        display: block;
-        width: 1000px;
+        display: inline-block;
+        width: 100%;
         height: 100px;
         margin: 0 auto;
     }
+    .header_search {
+        width: 100%;
+    }
+    fieldset {
+        width: 100%;
+    }
     .navContainer {
-        display: flex;
-        justify-content: center;
-        border-bottom: 1px solid bisque;
-    }
-    .navContainer ul {
-        margin: 0;
-        padding: 30px;
-        list-style: none;
-    }
-    .navContainer li {
-        margin: 5px;
-        border: 2px solid bisque;
-        border-radius: 50px;
-        display: inline-block;
-        font-size: 1px;
-        padding: 10px;
-        color: gray;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    }
-    .navContainer li a {
-        text-decoration: none;
-        list-style: none;
-        color: gray;
-    }
-    h1 {
-        font-size: 40px;
-        text-align: center;
+        width: 100%;
     }
     .slide_btn_box {
-        position: relative;
-        display: flex;
-        width: 1080px;
-        height: 30px;
-        margin: 0 auto;
-        top: 200px;
-    }
-    .slide_btn {
-        margin: 0 auto;
-        border: 1px solid white;
-        border-radius: 50%;
-        color: gray;
-        outline: white;
-    }
-    .handler_left {
-        margin-left: 260px;
-        display: flex;
-        font-size: 20px;
-    }
-    .handler_left button :hover {
-        color: black;
-        border-radius: 30%;
-        cursor: pointer;
-    }
-    .handler_right {
-        margin: 0 auto;
-        margin-right: 350px;
-        display: flex;
-        font-size: 20px;
-    }
-    .handler_right button :hover {
-        color: black;
-        border-radius: 30%;
-        cursor: pointer;
-    }
-    .container {
-        position: relative;
-        display: inline-block;
-        list-style: none;
-        -webkit-transition: all .3s ease-in;
-        transition: all .3s ease-in;
-        top: 40px;
-    }
-    .view {
-        position: relative;
-        top: 0px;
-        width: 400px;
-        overflow: hidden;
-        margin: 0 auto;
-    }
-    .view .container {
-        margin: 0 auto;
-        display: flex;
-        padding: 0px;
-        list-style: none;
-    }
-    .panel {
-        margin: 0 auto;
-        width: 400px;
-        min-height: 400px;
-    }
-    footer {
-        margin: 0 auto;
-        width: 1000px;
-        height: 30px;
+        width: 100%;
+        float: left;
     }
     .footer_menu {
-        display: flex;
-        justify-content: center;
-        padding: 30px;
-        margin: 30px;
-    }
-    .footer_menu img {
-        width: 30px;
-        vertical-align: middle;
-        margin: 5px;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    }
-    .copyright {
-        margin: 20px;
-        font-size: 15px;
-        color: gray;
-        text-align: center;
-        font: 'San Francisco', Helvetica, Arial, san-serif
+        width: 100%;
     }
 }
 
-@media ( min-width:480px) and (max-width:799px) {
+@media (max-width:768px) {
     #headerContainer {
-        margin: 0 auto;
-        width: 799px;
-    }
-    body {
-        width: 799px;
-    }
-    .header_menu2 {
-        position: relative;
-        display: flex;
-        top: 5px;
-        left: -40;
-        right: 150px;
-        justify-content: center;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .header_menu2 a {
-        color: black;
-        padding: 14px 16px;
-        font-size: 10px;
-    }
-    .header_menu2 img {
-        margin-bottom: 0;
-        width: 40px;
-        height: 40px;
-    }
-    .header_menu2 a:hover {
-        color: #808080;
+        width: 80%;
     }
     .header_search {
-        position: relative;
-        display: inline-block;
-        justify-content: center;
-        width: 450px;
-        height: 10px;
-        right: 0;
-        left: 0;
+        width: 100%;
     }
-    .header_search>img {
-        position: relative;
-        display: none;
-        right: -50px;
-    }
-    .header_search h2 {
-        display: none;
-    }
-    .header_search fieldset {
-        position: relative;
-        top: -20px;
-        left: 20px;
-        display: flex;
-        padding: 12px 0 12px 10px;
-        width: 420px;
-        height: 49px;
-        border: 2px solid #ff9234;
-        vertical-align: middle;
-    }
-    .header_search fieldset button {
-        width: 49px;
-        height: 46px;
-        border: none;
-        background: #ff9234;
-        position: absolute;
-        padding: 10;
-        right: -2px;
-        top: 0;
-        outline: white;
-    }
-    fieldset input {
-        position: relative;
-        display: inline-block;
-        height: 15px;
-        overflow: hidden;
-        animation: typingAni 3s steps(30, end) 1;
-    }
-    fieldset input::after {
-        position: absolute;
-        display: inline-block;
-        content: "";
-        width: 20px;
-        height: 23px;
-        top: 3px;
-        right: 0;
-        border-right: 1px solid #000;
-        animation: cursor 0.2s step-end infinite;
-    }
-    @keyframes typingAni {
-        0% {
-            width: 0%
-        }
-        100% {
-            width: 150px
-        }
-        ;
-    }
-    @keyframes cursor {
-        0% {
-            opacity: 0;
-        }
-        50% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
-    .header_search fieldset button img {
-        display: inline-block;
-        width: 21px;
-        height: 21px;
-    }
-    .header_search input {
-        border: none;
-        padding: 0;
-        outline: none;
-        vertical-align: middle;
-        width: 405px;
-        height: 23px;
-        left: 10;
-        right: 0;
-        top: 0
-    }
-    #search_keyboard {
-        position: absolute;
-        display: inline-block;
-        vertical-align: top;
-        width: 20px;
-        top: 10px;
-        left: -50px;
-        height: 11px;
-        margin: 3px;
-    }
-    #search_history {
-        position: absolute;
-        display: inline-block;
-        vertical-align: top;
-        left: -20px;
-        width: 11px;
-        height: 4px;
-    }
-    nav {
-        display: block;
-        width: 1000px;
-        height: 100px;
-        margin: 0 auto;
+    fieldset {
+        margin: 0 0 0 0;
+        width: 100%;
     }
     .navContainer {
-        width: 500px;
-        display: flex;
-        justify-content: center;
-        border-bottom: 1px solid bisque;
-    }
-    .navContainer ul {
-        margin: 0;
-        padding: 30px;
-        list-style: none;
-    }
-    .navContainer li {
-        margin: 3px;
-        border: 2px solid bisque;
-        border-radius: 50px;
         display: inline-block;
-        font-size: 1px;
-        padding: 10px;
-        color: gray;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    }
-    .navContainer li a {
-        text-decoration: none;
-        list-style: none;
-        color: gray;
-    }
-    h1 {
-        font-size: 40px;
-        text-align: center;
+        width: 100%;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
     }
     .slide_btn_box {
-        width: 799px;
-        height: 30px;
-        margin: 0 auto;
-        top: 200px;
-    }
-    .slide_btn {
-        margin: 0 auto;
-        border: 1px solid white;
-        border-radius: 50%;
-        color: gray;
-        outline: white;
+        width: 100%;
     }
     .handler_left {
-        position: relative;
-        top: -170px;
-        margin-left: 130px;
-        display: flex;
-        font-size: 20px;
-    }
-    .handler_left button :hover {
-        color: black;
-        border-radius: 30%;
-        cursor: pointer;
+        width: 100%;
     }
     .handler_right {
-        position: relative;
-        top: -170px;
-        margin-right: 450px;
-        display: flex;
-        font-size: 20px;
-    }
-    .handler_right button :hover {
-        color: black;
-        border-radius: 30%;
-        cursor: pointer;
-    }
-    .container {
-        position: relative;
-        display: inline-block;
-        list-style: none;
-        -webkit-transition: all .3s ease-in;
-        transition: all .3s ease-in;
-        top: 40px;
-    }
-    .view {
-        position: relative;
-        left: -155px;
-        top: 40px;
-        width: 400px;
-        overflow: hidden;
-        margin: 0 auto;
-    }
-    .view .container {
-        display: flex;
-        padding: 0px;
-        list-style: none;
-    }
-    .panel {
-        margin: 0 auto;
-        width: 400px;
-        min-height: 400px;
+        width: 100%;
     }
     footer {
-        margin: 0 auto;
-        width: 1000px;
-        height: 30px;
+        width: 100%;
+        display: inline-block;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
     }
     .footer_menu {
-        font-size: 10px;
-        position: relative;
-        top:30px;
-        left: -250px;
-        display: flex;
-        justify-content: center;
-        padding: 30px;
-        margin: 30px;
-    }
-    .footer_menu img {
-        width: 30px;
-        vertical-align: middle;
-        margin: 5px;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        width: 100%;
+        display: inline-block;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
     }
     .copyright {
-        position: relative;
-        left: -250px;
-        margin: 20px;
-        font-size: 15px;
-        color: gray;
-        text-align: center;
-        font: 'San Francisco', Helvetica, Arial, san-serif
+        width: 100%;
+        display: inline-block;
     }
 }
 
-@media ( min-width:320px) and (max-width:499px) {
+@media (max-width:480px) {
     #headerContainer {
-        margin: 0 auto;
-        width: 499px;
-    }
-    body {
-        width: 499px;
-    }
-    .header_menu2 {
-        position: relative;
-        display: flex;
-        top: 3px;
-        left: -100px;
-        right: 150px;
-        justify-content: center;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .header_menu2 a {
-        color: black;
-        padding: 14px 16px;
-        font-size: 10px;
-    }
-    .header_menu2 img {
-        margin-bottom: 0;
-        width: 30px;
-        height: 30px;
-    }
-    .header_menu2 a:hover {
-        color: #808080;
+        display: inline-block;
+        width: 100%
     }
     .header_search {
-        position: relative;
-        display: inline-block;
-        justify-content: center;
-        width: 320px;
-        height: 10px;
-        right: 0;
-        left: 0;
+        width: 100%
     }
-    .header_search>img {
-        position: relative;
-        display: none;
-        right: -50px;
-    }
-    .header_search h2 {
-        display: none;
-    }
-    .header_search fieldset {
-        position: relative;
-        top: -20px;
-        left: 20px;
-        padding: 12px 0 12px 10px;
-        width: 260px;
-        height: 44px;
-        border: 2px solid #ff9234;
-        vertical-align: middle;
-    }
-    .header_search fieldset button {
-        width: 40px;
-        height: 40px;
-        border: none;
-        background: #ff9234;
-        position: absolute;
-        padding: 10;
-        right: -2px;
-        top: 0;
-        outline: white;
-    }
-    fieldset input {
-        width: 200px;
-        position: relative;
-        display: inline-block;
-        overflow: hidden;
-        animation: typingAni 3s steps(30, end) 1;
-    }
-    fieldset input::after {
-        position: absolute;
-        display: inline-block;
-        content: "";
-        width: 20px;
-        height: 23px;
-        top: 3px;
-        right: 0;
-        border-right: 1px solid #000;
-        animation: cursor 0.2s step-end infinite;
-    }
-    @keyframes typingAni {
-        0% {
-            width: 0%
-        }
-        100% {
-            width: 150px
-        }
-        ;
-    }
-    @keyframes cursor {
-        0% {
-            opacity: 0;
-        }
-        50% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
-    .header_search fieldset button img {
-        display: inline-block;
-        width: 21px;
-        height: 21px;
-    }
-    .header_search input {
-        border: none;
-        padding: 0;
-        outline: none;
-        vertical-align: middle;
-        width: 405px;
-        height: 23px;
-        left: 10;
-        right: 0;
-        top: 0
-    }
-    #search_keyboard {
-        position: absolute;
-        display: inline-block;
-        vertical-align: top;
-        width: 20px;
-        top: 10px;
-        left: -50px;
-        height: 11px;
-        margin: 3px;
-    }
-    #search_history {
-        position: absolute;
-        display: inline-block;
-        vertical-align: top;
-        left: -20px;
-        width: 11px;
-        height: 4px;
-    }
-    nav {
-        display: block;
-        width: 500px;
-        height: 100px;
-        margin: 0 auto;
-    }
-    .navContainer {
-        width: 400px;
-        display: flex;
-        justify-content: center;
-        border-bottom: 1px solid bisque;
+    fieldset {
+        width: 100%
     }
     .navContainer ul {
-        margin: 0;
-        padding: 5px;
-        list-style: none;
-    }
-    .navContainer li {
-        position: relative;
-        left: -50px;
-        margin: 1px;
-        border: 2px solid bisque;
-        border-radius: 50px;
-        display: inline-block;
-        padding: 5px;
-        color: gray;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    }
-    .navContainer li a {
-        text-decoration: none;
-        list-style: none;
-        color: gray;
-    }
-    h1 {
-        font-size: 40px;
-        text-align: center;
+        width: 100%;
     }
     .slide_btn_box {
-        width: 799px;
-        height: 30px;
-        margin: 0 auto;
-        top: 200px;
-    }
-    .slide_btn {
-        margin: 0 auto;
-        border: 1px solid white;
-        border-radius: 50%;
-        color: gray;
-        outline: white;
-    }
-    .handler_left {
-        position: relative;
-        top: -190px;
-        margin-left: 130px;
-        display: flex;
-        font-size: 20px;
-    }
-    .handler_left button :hover {
-        color: black;
-        border-radius: 30%;
-        cursor: pointer;
-    }
-    .handler_right {
-        position: relative;
-        top: -190px;
-        margin-right: 600px;
-        display: flex;
-        font-size: 20px;
-    }
-    .handler_right button :hover {
-        color: black;
-        border-radius: 30%;
-        cursor: pointer;
-    }
-    .container {
-        position: relative;
-        display: inline-block;
-        list-style: none;
-        -webkit-transition: all .3s ease-in;
-        transition: all .3s ease-in;
-        top: 40px;
-    }
-
-    p {
-        text-align: center;
-    }
-    .view {
-        position: relative;
-        left: -95px;
-        top: 0px;
-        width: 400px;
-        overflow: hidden;
-        margin: 0 auto;
-    }
-    .view .container {
-        display: flex;
-        padding: 0px;
-        list-style: none;
-    }
-    .panel {
-        margin: 0 auto;
-        width: 400px;
-        min-height: 400px;
-    }
-    footer {
-        margin: 0 auto;
-        width: 1000px;
-        height: 30px;
+        float: left;
+        width: 100%
     }
     .footer_menu {
-        font-size: 10px;
-        position: relative;
-        left: -350px;
-        display: flex;
-        justify-content: center;
-        padding: 30px;
-        margin: 30px;
+        width: 100%;
+        display: inline-block;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
     }
-    .footer_menu img {
-        width: 30px;
-        vertical-align: middle;
-        margin: 5px;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    footer {
+        width: 100%;
+        display: inline-block;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
     }
     .copyright {
-        position: relative;
-        left: -350px;
-        margin: 20px;
-        font-size: 10px;
-        color: gray;
-        text-align: center;
-        font: 'San Francisco', Helvetica, Arial, san-serif
+        display: inline-block;
+        width: 100%
     }
 }
