@@ -70,12 +70,21 @@ a {
   text-decoration: none;
 }
 
-.header_text {
-  margin: 0;
-  margin-bottom: 30px;
+.header__container {
+  width: 100%;
+  height: 700px;
+  background-color: #ff9e80;
 }
 
-.header_button {
+.header__text {
+  margin-top: 30px;
+  color: white;
+  font-size: 80px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.header__button {
   margin: 0;
   position: absolute;
   top: 70%;
@@ -84,18 +93,12 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.header__container {
-  width: 100%;
-  height: 700px;
-  background-color: #ff9e80;
-}
-
-.header_pofile {
+.header__pofile {
   display: flex;
   justify-content: center;
 }
 
-.header_pofile img {
+.header__pofile img {
   margin-top: 70px;
   border-radius: 50%;
   width: 200px;
@@ -103,116 +106,74 @@ a {
   border: 4px solid white;
 }
 
-.header_text {
-  margin-top: 30px;
-  color: white;
-  font-size: 80px;
-  font-weight: bolder;
-  text-align: center;
-}
-
-/* 검색 */
-
-/* 네비바 left  */
-
-.navContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  border-bottom: 3px solid bisque;
-}
-
-.navContainer ul {
-  margin: 0;
-  padding: 30px;
-  list-style: none;
-}
-
-.navContainer li {
-  margin: 3px;
-  border: 2px solid bisque;
-  border-radius: 50px;
-  display: inline-block;
-  font-size: 1px;
-  padding: 10px;
-  color: gray;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.navContainer li a {
-  text-decoration: none;
-  list-style: none;
-  color: gray;
-}
-
 /* 슬라이더 */
 
-.slide_btn_box {
-  display: flex;
-  justify-content: center;
-  top: 10px;
-}
-
-.slide_btn {
-  border: 3px solid white;
-  border-radius: 50px;
-  color: gray;
-  list-style: none;
-  outline: 0;
-}
-
-/* 슬라이드 동작  */
-
-.handler_left {
-  margin-top: 10px;
-  margin-left: 80px;
-}
-
-.handler_right {
-  margin-top: 10px;
-  margin-left: 300px;
-}
-
-.handler_left button :hover {
-  color: black;
-  border-radius: 30%;
-  cursor: pointer;
-}
-
-.handler_right button :hover {
-  color: black;
-  border-radius: 30%;
-  cursor: pointer;
-}
-
-.container {
+.slide__container {
   position: relative;
-  display: inline-block;
-  list-style: none;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-  top: 40px;
-}
-
-.view {
-  display: flex;
-  position: relative;
-  top: 0px;
-  width: 400px;
+  width: 100%;
+  height: 400px;
   overflow: hidden;
-  margin: 0 auto;
+  -webkit-transition: left .3s ease-in;
+  transition: left .3s ease-in;
 }
 
-.view .container {
-  display: flex;
-  padding: 0px;
-  list-style: none;
+.slide__wrap {
+  position: absolute;
+  width: 100%;
+  height: 400px
 }
 
-.panel {
-  width: 400px;
-  min-height: 400px;
+.slide {
+  position: absolute;
+  width: 100%;
+  padding: 0 10%;
+  box-sizing: border-box;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  overflow: hidden;
 }
+
+#prev, #next {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#prev.disabled, #next.disabled {
+  display: none;
+}
+
+#prev {
+  margin-left: -480px;
+  background-image: url(images/arrow1.png);
+  font-size: 10px;
+}
+
+#prev :hover {
+  background-image: url(images/arrow1.png);
+}
+
+#next {
+  margin-left: 380px;
+  background-image: url(images/arrow2.png);
+  font-size: 10px;
+}
+
+#next :hover {
+  background-image: url(images/arrow2.png);
+  color: black;
+}
+
+/* 푸터 */
 
 footer {
   text-align: center;
