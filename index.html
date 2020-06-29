@@ -10,129 +10,90 @@
 </head>
 
 <!-- ID는 고유 단하나의 존재 
-class 여러개 사용가능 
-하나의 div에 여러 클래스 네임 사용가능 ex <h2 class= "header1 header2 header3"> 
-하나의 div로  클래스  사용가능    ex < h2 class="header    -->
+    class 여러개 사용가능 
+    하나의 div에 여러 클래스 네임 사용가능 ex <h2 class= "header1 header2 header3"> 
+        하나의 div로  클래스  사용가능    ex < h2 class="header    -->
 
 <body>
-    <header id="headerContainer">
-        <!-- 헤더1 최상단 메뉴 -->
+    <nav>
+        <div class="navbar">
+            <div class="navbar__logo">
+                <a href="index.htm">
+                    <i class="fab fa-autoprefixer"></i></a>
+            </div>
 
-        <!-- 헤더2 아이콘  -->
-        <div class="header_menu2">
-            <div>
-                <a href="index.html">
-                    <img src="images/profile.png">
+            <ul class="navbar__menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="">Intro</a></li>
+                <li><a href="">html</a></li>
+                <li><a href="">CSS</a></li>
+                <li><a href="">JavaScript</a></li>
+            </ul>
+
+            <div class="nav__icon">
+                <div>
+                    <a href="index.html">
+                        <i class="fas fa-shoe-prints"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://developer.mozilla.org/ko/">
+                        <i class="fas fa-file-code"></i></a>
+                </div>
+                <div>
+                    <a href="https://github.com/ssamwonn">
+                        <i class="fab fa-github"></i></a>
+                </div>
+                <div>
+                    <a href="https://instagram.com/ssamwonn">
+                        <i class="fab fa-instagram"></i></a>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/channel/UC4_1jp2hk87djFeAMJUvFdg">
+                        <i class="fab fa-youtube"></i></a>
+                </div>
+                <div>
+                    <a href="https://velog.io/@undefined">
+                        <i class="fab fa-blogger-b"></i></a>
+                </div>
                 </a>
             </div>
-            <div>
-                <a href="https://developer.mozilla.org/ko/">
-                    <img src="images/MDN.svg"></a>
-            </div>
-            <div>
-                <a href="https://github.com/ssamwonn">
-                    <img src="https://csis.pace.edu/~scharff/pacemobilelab/images/github.jpg"></i></a>
-            </div>
-            <div>
-                <a href="https://instagram.com/ssamwonn">
-                    <img src="https://i.pinimg.com/originals/92/dd/e3/92dde3558b1c2f8efec4b2cef0b56a13.png"></i></a>
-            </div>
-            <div>
-                <a href="https://www.youtube.com/channel/UC4_1jp2hk87djFeAMJUvFdg">
-                    <img src="https://seeklogo.net/wp-content/uploads/2020/03/YouTube-icon-SVG.png"></i></a>
-            </div>
-            <div>
-                <a href="https://velog.io/@undefined">
-                    <img src="https://pbs.twimg.com/profile_images/1228368893321736193/Ov0og7E8_400x400.jpg"></a>
-            </div>
-            </a>
-        </div>
-
-        <!-- 헤더  검색창  -->
-        <div class="header_search">
-            <fieldset>
-                <h2 class="blind" 검색창></h2>
-                <legend class="blind">검색</legend>
-                <input placeholder="명품이 되는 삶을 살고 싶다" />
-                <span class="blind">검색</span>
-                <button>
-                    <img src="https://www.munhak.com/theme/munhakdongne/img/search.png">
-                    <span id="search_keyboard"><i class="far fa-keyboard"></i></span>
-                    <span id="search_history"><i class="fas fa-sort-down"></i></span>
-                </button>
-            </fieldset>
-        </div>
-    </header>
-    <!--네비 메뉴  -->
-    <nav>
-        <div class="navContainer">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li>INTRO</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVASCRIPT</li>
-            </ul>
         </div>
     </nav>
-
-
-    <!-- 슬라이더  -->
-
-    <div class="slide_btn_box">
-        <div class='handler_left'>
-            <button class="slide_btn"><i class="fas fa-arrow-left"></i></button>
+    <div class="header__container">
+        <div class="header_pofile">
+            <img src="images/profile.png">
         </div>
-        <div class='handler_right'>
-            <button class="slide_btn"><i class="fas fa-arrow-right"></i></button>
+        <div class="header_text">
+            Hello </br>
+            nice meet you,
         </div>
     </div>
+    <div class="header_button">
+        <button>CONTACT ME</button>
+    </div>
+    </header>
 
-    <!-- 슬라이더 뷰  -->
+    <div class="side__container">
 
-    <div id="carousel" class="view">
-        <ul class='container'>
-            <li class='panel'>
-                <img src="images/profile1.png">
-            </li>
-            <li class='panel'>
-                <i>
-             <p style="font-size:30px">HISTORY</p>
-            </i>
-            <p>1990년 4월 2일 😄</p>
-            <p>전라남도 여수 출생 </p>
-            <p>2010~2011 해군 전역😂</p>
-            <p style="color:#63b7af">
-                </style> 2012~2016 ChungDamDong SALON👍</p>
-            <p style="color:#63b7af">~2020 ChungDamDong HAIR DESIGNER👍</p>
-            <p>2020~ Frontend Developer preparatory </p>
-            <!-- <img src="images/1.png"> -->
-            </li>
-            <li class='panel'>
-                <i>
-                    <p style="font-size: 30px">LIFE</p>
-                </i>
-                <p>여행🚅</p>
-                <P>드라이브🚗</P>
-                <p>책 읽기📓</p>
-                <p>술 : ❌</p>
-                <p>담배 : ❌</p>
-                <!-- <img src="images/3.jpg"> -->
-            </li>
-            <li class='panel'>
-                <img src="images/index.png">
-            </li>
-            <li class='panel'>
-                <img src="images/heunguel.png">
-            </li>
-        </ul>
+
+
+
     </div>
 
 
-    <script src="./introduction1.js" type="text/javascript" charset="utf-8"></script>
+
+
 </body>
 
-<!-- 푸더 바 하단 -->
+
+
+
+
+
+
+
+
 
 <footer>
     <div class="footer_menu">

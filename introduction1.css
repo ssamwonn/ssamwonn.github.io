@@ -1,183 +1,114 @@
-/* @media ( min-width:501px) and ( max-width:768) {}
-
-@media ( min-width:0px) and ( max-width:500px) {} */
-
 /* *모든태그  */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-/* 헤더메뉴   */
-
-#headerContainer {
-    margin: 0 auto;
-    width: 800px;
+a {
+  text-decoration: none;
+  color: white;
 }
 
-.blind {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    margin: -1px;
-    width: 1px;
-    height: 1px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  width: 100%;
+  height: 100px;
+  background-color: #ff9e80;
 }
 
-.header_menu2 {
-    display: inline-block;
-    justify-content: flex-end;
-    margin: 0 auto;
-    display: flex;
-    padding-bottom: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+.navbar__logo {
+  font-size: 24px;
 }
 
-.header_menu2 a {
-    color: black;
-    padding: 14px 16px;
-    font-size: 10px;
+.navbar__logo i {
+  color: white;
 }
 
-.header_menu2 img {
-    margin: 0;
-    width: 64px;
-    height: 65px;
-    color: yellow;
-    display: flex;
+.navbar__menu {
+  display: flex;
+  font-size: 20px;
+  padding: 0;
+  list-style: none;
 }
 
-.header_menu2 a:hover {
-    color: #100808;
+.navbar__menu li {
+  padding: 8px 12px;
 }
 
-.header_search {
-    display: inline-block;
-    display: flex;
-    margin: 0 auto;
+.navbar__menu li:hover {
+  background-color: #ffc1e3;
+  border-radius: 5px;
 }
 
-.header_search>img {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    top: -28px;
-    right: -200px;
+.nav__icon {
+  display: flex;
 }
 
-/* blind 속성은 스크린에서는 보이게 하고 ui에서는 보이지 않게 한다 */
-
-.header_search h2 {
-    display: none;
+.nav__icon i {
+  display: flex;
+  color: white;
+  padding: 12px 12px;
+  font-size: 30px;
+  margin: 0;
+  width: 44px;
+  height: 44px;
 }
 
-.header_search fieldset {
-    position: relative;
-    margin: 0 auto;
-    padding: 12px 0 12px 10px;
-    width: 400px;
-    height: 49px;
-    border: 2px solid #ff9234;
-    /*헥스표기법*/
-    display: inline-block;
-    vertical-align: middle;
+.nav__icon i:hover {
+  color: #100808;
 }
 
-.header_search fieldset button {
-    width: 49px;
-    height: 46px;
-    border: none;
-    background: #ff9234;
-    position: absolute;
-    padding: 10;
-    right: -2px;
-    top: 0;
-    outline: white;
+.nav__icon a {
+  text-decoration: none;
 }
 
-fieldset input {
-    position: relative;
-    display: inline-block;
-    height: 15px;
-    overflow: hidden;
-    animation: typingAni 3s steps(30, end) 1;
+.header_text {
+  margin: 0;
+  margin-bottom: 30px;
 }
 
-fieldset input::after {
-    position: absolute;
-    display: inline-block;
-    content: "";
-    width: 10px;
-    height: 10px;
-    top: 3px;
-    right: 0;
-    border-right: 1px solid #000;
-    animation: cursor 0.2s step-end infinite;
+.header_button {
+  margin: 0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-@keyframes typingAni {
-    0% {
-        width: 0%
-    }
-    100% {
-        width: 150px
-    }
-    ;
+.header__container {
+  width: 100%;
+  height: 700px;
+  background-color: #ff9e80;
 }
 
-@keyframes cursor {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+.header_pofile {
+  display: flex;
+  justify-content: center;
 }
 
-.header_search fieldset button img {
-    display: inline-block;
-    width: 21px;
-    height: 21px;
+.header_pofile img {
+  margin-top: 70px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 4px solid white;
 }
 
-.header_search input {
-    border: none;
-    padding: 0;
-    outline: none;
-    vertical-align: middle;
-    width: 405px;
-    height: 23px;
-    left: 10;
-    right: 0;
-    top: 0
-}
-
-#search_keyboard {
-    position: absolute;
-    display: inline-block;
-    vertical-align: top;
-    width: 20px;
-    top: 10px;
-    left: -50px;
-    height: 11px;
-    margin: 3px;
-}
-
-#search_history {
-    position: absolute;
-    display: inline-block;
-    vertical-align: top;
-    left: -20px;
-    width: 11px;
-    height: 4px;
+.header_text {
+  margin-top: 30px;
+  color: white;
+  font-size: 80px;
+  font-weight: bolder;
+  text-align: center;
 }
 
 /* 검색 */
@@ -185,245 +116,128 @@ fieldset input::after {
 /* 네비바 left  */
 
 .navContainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    border-bottom: 3px solid bisque;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 3px solid bisque;
 }
 
 .navContainer ul {
-    margin: 0;
-    padding: 30px;
-    list-style: none;
+  margin: 0;
+  padding: 30px;
+  list-style: none;
 }
 
 .navContainer li {
-    margin: 3px;
-    border: 2px solid bisque;
-    border-radius: 50px;
-    display: inline-block;
-    font-size: 1px;
-    padding: 10px;
-    color: gray;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin: 3px;
+  border: 2px solid bisque;
+  border-radius: 50px;
+  display: inline-block;
+  font-size: 1px;
+  padding: 10px;
+  color: gray;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .navContainer li a {
-    text-decoration: none;
-    list-style: none;
-    color: gray;
+  text-decoration: none;
+  list-style: none;
+  color: gray;
 }
 
 /* 슬라이더 */
 
 .slide_btn_box {
-    display: flex;
-    justify-content: center;
-    width: 1700px;
-    height: 30px;
-    top: 10px;
+  display: flex;
+  justify-content: center;
+  top: 10px;
 }
 
 .slide_btn {
-    border: 3px solid white;
-    border-radius: 50px;
-    color: gray;
-    list-style: none;
-    outline: 0;
+  border: 3px solid white;
+  border-radius: 50px;
+  color: gray;
+  list-style: none;
+  outline: 0;
 }
 
 /* 슬라이드 동작  */
 
 .handler_left {
-    margin-top: 10px;
-    margin-left: 80px;
+  margin-top: 10px;
+  margin-left: 80px;
 }
 
 .handler_right {
-    margin-top: 10px;
-    margin-left: 300px;
+  margin-top: 10px;
+  margin-left: 300px;
 }
 
 .handler_left button :hover {
-    color: black;
-    border-radius: 30%;
-    cursor: pointer;
+  color: black;
+  border-radius: 30%;
+  cursor: pointer;
 }
 
 .handler_right button :hover {
-    color: black;
-    border-radius: 30%;
-    cursor: pointer;
+  color: black;
+  border-radius: 30%;
+  cursor: pointer;
 }
 
 .container {
-    position: relative;
-    display: inline-block;
-    list-style: none;
-    -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in;
-    top: 40px;
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  top: 40px;
 }
 
 .view {
-    display: flex;
-    position: relative;
-    top: 0px;
-    width: 400px;
-    overflow: hidden;
-    margin: 0 auto;
+  display: flex;
+  position: relative;
+  top: 0px;
+  width: 400px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .view .container {
-    display: flex;
-    padding: 0px;
-    list-style: none;
+  display: flex;
+  padding: 0px;
+  list-style: none;
 }
 
 .panel {
-    width: 400px;
-    min-height: 400px;
+  width: 400px;
+  min-height: 400px;
 }
 
 footer {
-    text-align: center;
-    font-size: 5px;
-    height: 30px;
+  text-align: center;
+  font-size: 5px;
+  height: 30px;
 }
 
 .footer_menu {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-    margin: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  margin: 30px;
 }
 
 .footer_menu img {
-    width: 30px;
-    vertical-align: middle;
-    margin: 5px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  width: 30px;
+  vertical-align: middle;
+  margin: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .copyright {
-    margin-top: 40px;
-    font-size: 5px;
-    color: gray;
-    text-align: center;
-    font: 'San Francisco', Helvetica, Arial, san-serif
-}
-
-@media (max-width:1220px) {
-    #headerContainer {
-        width: 100%;
-    }
-    nav {
-        display: inline-block;
-        width: 100%;
-        height: 100px;
-        margin: 0 auto;
-    }
-    .header_menu2 img {
-        margin: 0;
-        width: 40px;
-        height: 40px;
-        color: yellow;
-        display: flex;
-    }
-    .header_search {
-        width: 100%;
-    }
-    fieldset {
-        width: 100%;
-    }
-    .navContainer {
-        width: 100%;
-    }
-    .slide_btn_box {
-        width: 100%;
-        float: left;
-    }
-    .footer_menu {
-        width: 100%;
-    }
-}
-
-@media (max-width:768px) {
-    #headerContainer {
-        width: 80%;
-    }
-    .header_search {
-        width: 100%;
-    }
-    fieldset {
-        margin: 0 0 0 0;
-        width: 100%;
-    }
-    .navContainer {
-        display: inline-block;
-        width: 100%;
-        margin: 0 0 0 0;
-        padding: 0 0 0 0;
-    }
-    .slide_btn_box {
-        width: 100%;
-    }
-    .handler_left {
-        width: 100%;
-    }
-    .handler_right {
-        width: 100%;
-    }
-    footer {
-        width: 100%;
-        display: inline-block;
-        margin: 0 0 0 0;
-        padding: 0 0 0 0;
-    }
-    .footer_menu {
-        width: 100%;
-        display: inline-block;
-        margin: 0 0 0 0;
-        padding: 0 0 0 0;
-    }
-    .copyright {
-        width: 100%;
-        display: inline-block;
-    }
-}
-
-@media (max-width:480px) {
-    #headerContainer {
-        display: inline-block;
-        width: 100%
-    }
-    .header_search {
-        width: 100%
-    }
-    fieldset {
-        width: 100%
-    }
-    .navContainer ul li {
-        width: 100%;
-        width: 30px;
-        height: 10px;
-    }
-    .slide_btn_box {
-        float: left;
-        width: 100%
-    }
-    .footer_menu {
-        width: 100%;
-        display: inline-block;
-        padding: 0 0 0 0;
-    }
-    footer {
-        width: 100%;
-        display: inline-block;
-     
-    }
-    .copyright {
-        display: inline-block;
-        width: 100%
-    }
+  margin-top: 40px;
+  font-size: 5px;
+  color: gray;
+  text-align: center;
+  font: "San Francisco", Helvetica, Arial, san-serif;
 }
